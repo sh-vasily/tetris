@@ -2,7 +2,6 @@ export class Engine{
     constructor(config, fieldFactory) {
         this.config = config;
         this.fieldFactory = fieldFactory;
-        console.log(fieldFactory);
     }
 
     start() {
@@ -29,7 +28,7 @@ export class Engine{
             }
 
             item.style.top = `${x += 10}px`;
-        }, this.config.speed);
+        }, this.config.interval);
 
 
         window.addEventListener("keydown", function (event) {
